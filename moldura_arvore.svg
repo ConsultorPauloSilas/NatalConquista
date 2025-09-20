@@ -1,0 +1,31 @@
+<svg width="400" height="700" viewBox="0 0 400 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Star -->
+  <path d="M200 40 L215 80 L260 80 L225 105 L240 145 L200 120 L160 145 L175 105 L140 80 L185 80 Z"
+        stroke="#FFD54D" stroke-width="6" filter="url(#glow)"/>
+  <!-- Tree contour (stylized) -->
+  <path d="M200 120
+           C 240 150, 270 180, 300 210
+           C 270 225, 240 235, 200 245
+           C 240 270, 280 300, 320 330
+           C 280 350, 240 360, 200 370
+           C 235 395, 275 430, 330 470
+           C 270 490, 235 500, 200 505
+           C 165 500, 130 490, 70 470
+           C 125 430, 165 395, 200 370
+           C 160 360, 120 350, 80 330
+           C 120 300, 160 270, 200 245
+           C 160 235, 130 225, 100 210
+           C 130 180, 160 150, 200 120 Z"
+        stroke="#6EC1FF" stroke-width="6" fill="none" filter="url(#glow)"/>
+  <!-- Trunk -->
+  <rect x="180" y="505" width="40" height="55" rx="6" stroke="#6EC1FF" stroke-width="6" fill="none" filter="url(#glow)"/>
+</svg>

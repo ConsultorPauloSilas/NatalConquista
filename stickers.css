@@ -1,0 +1,19 @@
+
+/* ==== Sticker CONQUISTACESTAS — topo ESQUERDO, fixo, compacto ==== */
+.sticker--brand{
+  position: fixed !important;      /* Fixo na viewport */
+  top: 16px !important;
+  left: 16px !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: clamp(80px, 12vw, 150px) !important;
+  opacity: 0.9 !important;         /* leve transparência */
+  z-index: 2147483647 !important;  /* na frente de tudo */
+  pointer-events: none !important; /* não intercepta cliques */
+  user-select: none !important;
+  transform: none !important;      /* evita movimentos/rotações */
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,.35)) !important;
+}
+
+/* Remove qualquer efeito/shine herdado */
+.sticker--brand::after{ display:none !important; }

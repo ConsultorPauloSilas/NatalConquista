@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cestas Natalinas CONQUISTA - Afeto em forma de cesta</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stickers.css">
+</head>
+<body>
+  <!-- Música de fundo -->
+  <audio id="bgMusic" src="jinglebells.mp3.mp3" preload="auto" loop playsinline autoplay></audio>
+
+  <!-- Hotfix de autoplay: toca imediatamente; se bloqueado, libera no primeiro gesto -->
+  <script>
+  (function () {
+    var a = document.getElementById('bgMusic');
+    if (!a) return;
+    a.volume = 0.5;
+
+    function tryPlayUnmuted() {
+      a.muted = false;
+      return a.play();
+    }
+
+    function armFirstGesturePlay() {
+      function unlock() {
+        a.muted = false;
+        a.play().catch(function(){});
+        window.removeEventListener('pointerdown', unlock);
+        window.removeEventListener('keydown', unlock);
+      }
+      window.addEventListener('pointerdown', unlock, { once: true });
+      window.addEventListener('keydown', unlock, { once: true });
+    }
+
+    tryPlayUnmuted().catch(function () {
+      a.muted = true;
+      a.play().then(function () {
+        armFirstGesturePlay();
+      }).catch(function () {
+        armFirstGesturePlay();
+      });
+    });
+  })();
+  </script>
+
+  <!-- Música de fundo -->
+  
+
+  <!-- Controle de música -->
+  <div id="musicControl" style="position:fixed; right:20px; bottom:20px; z-index:1000;">
+    <button id="toggleSound" aria-label="Ativar/pausar música" style="padding:10px 14px; border-radius:999px; border:0; box-shadow:0 2px 8px rgba(0,0,0,.2); cursor:pointer;">🔊</button>
+  </div>
+
+   
+
+  <!-- Botão flutuante WhatsApp -->
+<a href="m1533260763?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20Conquista%20sobre%20as%20cestas%20de%20Natal.%20%F0%9F%8E%84" target="_blank" class="whatsapp-float" title="Fale conosco no WhatsApp">
+        <span>📲​</span>
+    </a>
+
+    <!---- Papai Noel animado ---->
+    <div class="santa-container">
+        <div class="santa">🎅</div>
+    </div>
+
+    <!-- Flocos de neve -->
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+    </div>
+
+    <!-- Estrelas cintilantes -->
+    <div class="stars" aria-hidden="true">
+        <div class="star">✨</div>
+        <div class="star">⭐</div>
+        <div class="star">✨</div>
+        <div class="star">⭐</div>
+        <div class="star">✨</div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>CONQUISTA</h1>
+                    <span class="logo-subtitle">DISTRIBUIDORA DE ALIMENTOS</span>
+                </div>
+                <div class="header-text">
+                    <h2>Presenteie com sabor, carinho e elegância. Entrega rápida para empresas e famílias.</h2>
+                    <p class="slogan">Afeto em forma de cesta</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Seção principal -->
+        <main class="main-content">
+            <!-- Introdução -->
+            <section class="intro">
+                <h2>🎄 Cestas Natalinas 2025 🎄</h2>
+                <p>Momentos especiais merecem cestas natalinas com a tradição e qualidade da CONQUISTA DISTRIBUIDORA.</p>
+            </section>
+
+            <!-- Cestas -->
+            <section class="baskets-section">
+                <div class="baskets-grid">
+                    <!-- Cesta 1 - Especial de Natal -->
+                    <div class="basket-card">
+                        <div class="basket-header">
+                            <h3>🎁 ESPECIAL DE NATAL</h3>
+                            <div class="basket-info">
+                                <span class="items-count">29 itens</span>
+                                <span class="price">R$ 190,00</span>
+                            </div>
+                        </div>
+                        <div class="basket-items">
+                            <button class="toggle-items" data-basket="1">Ver todos os itens</button>
+                            <ul class="items-list hidden" id="items-1">
+                                <li>Panetone tradicional BAUDUCCO/VISCONTI 400g</li>
+                                <li>Chocotone (panetone de chocolate) BAUDUCCO/VISCONTI 400g</li>
+                                <li>Vinho tinto suave 770ml</li>
+                                <li>Espumante filtrado 660ml</li>
+                                <li>Bombons sortidos NESTLÉ/GAROTO 251g</li>
+                                <li>Amendoim torrado 50g</li>
+                                <li>Azeitonas verdes 100g</li>
+                                <li>Balas de goma 32g</li>
+                                <li>Barrinha Maxi Chocolate 25g</li>
+                                <li>Biscoito aperitivo 90g</li>
+                                <li>Biscoito waffer recheado 80g</li>
+                                <li>Cookies 60g</li>
+                                <li>Creme de leite 300g</li>
+                                <li>Doce de leite 300g</li>
+                                <li>Ervilha em conserva 170g</li>
+                                <li>Farofa pronta temperada 180g</li>
+                                <li>Gelatina em pó 20g</li>
+                                <li>Leite condensado 270g</li>
+                                <li>Macarrão 200g</li>
+                                <li>Maionese 200g</li>
+                                <li>Milho verde em conserva 170g</li>
+                                <li>Mistura para bolo 400g</li>
+                                <li>Mistura para manjar 50g</li>
+                                <li>Pão de mel 50g</li>
+                                <li>Refresco em pó (sabor de fruta) 20g</li>
+                                <li>Salgadinho sortido 30g</li>
+                                <li>Torrone de amendoim 45g</li>
+                                <li>Tubetes waffer recheados 52g (Tub-in)</li>
+                                <li>Caixa de Natal decorada (embalagem para presente)</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn--primary btn--full-width">Solicitar Orçamento</button>
+                    </div>
+
+                    <!-- Cesta 2 - Conquista de Natal -->
+                    <div class="basket-card">
+                        <div class="basket-header">
+                            <h3>🎁 CONQUISTA DE NATAL</h3>
+                            <div class="basket-info">
+                                <span class="items-count">25 itens</span>
+                                <span class="price">R$ 140,00</span>
+                            </div>
+                        </div>
+                        <div class="basket-items">
+                            <button class="toggle-items" data-basket="2">Ver todos os itens</button>
+                            <ul class="items-list hidden" id="items-2">
+                                <li>Panetone tradicional BAUDUCCO/VISCONTI 400g</li>
+                                <li>Espumante filtrado 660ml</li>
+                                <li>Bombons sortidos NESTLÉ/GAROTO 251g</li>
+                                <li>Amendoim 50g</li>
+                                <li>Azeitonas verdes 100g</li>
+                                <li>Balas de goma 32g</li>
+                                <li>Barrinha Maxi Chocolate 25g</li>
+                                <li>Biscoito aperitivo 90g</li>
+                                <li>Biscoito waffer recheado 80g</li>
+                                <li>Cookies 60g</li>
+                                <li>Doce de leite 300g</li>
+                                <li>Ervilha em conserva 170g</li>
+                                <li>Farofa pronta temperada 180g</li>
+                                <li>Gelatina em pó 20g</li>
+                                <li>Leite condensado 270g</li>
+                                <li>Macarrão 200g</li>
+                                <li>Maionese 200g</li>
+                                <li>Mistura para bolo 400g</li>
+                                <li>Mistura para manjar 50g</li>
+                                <li>Palitos de chocolate crocantes 38g</li>
+                                <li>Refresco em pó (sabor de fruta) 20g</li>
+                                <li>Salgadinho sortido 30g</li>
+                                <li>Torrone de amendoim 45g</li>
+                                <li>Tubetes recheados 52g (Tub-in)</li>
+                                <li>Caixa de Natal decorada (embalagem para presente)</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn--primary btn--full-width">Solicitar Orçamento</button>
+                    </div>
+
+                    <!-- Cesta 3 - Clássica de Natal -->
+                    <div class="basket-card">
+                        <div class="basket-header">
+                            <h3>🎁 CLÁSSICA DE NATAL</h3>
+                            <div class="basket-info">
+                                <span class="items-count">19 itens</span>
+                                <span class="price">R$ 100,00</span>
+                            </div>
+                        </div>
+                        <div class="basket-items">
+                            <button class="toggle-items" data-basket="3">Ver todos os itens</button>
+                            <ul class="items-list hidden" id="items-3">
+                                <li>Panetone tradicional BAUDUCCO/VISCONTI 400g</li>
+                                <li>Amendoim 50g</li>
+                                <li>Azeitonas verdes 100g</li>
+                                <li>Balas de goma 32g</li>
+                                <li>Barrinha Maxi Chocolate 25g</li>
+                                <li>Biscoito aperitivo 90g</li>
+                                <li>Biscoito waffer recheado 80g</li>
+                                <li>Cookies 60g</li>
+                                <li>Farofa pronta temperada 180g</li>
+                                <li>Gelatina em pó 20g</li>
+                                <li>Macarrão 200g</li>
+                                <li>Maionese 200g</li>
+                                <li>Mistura para bolo 400g</li>
+                                <li>Mistura para manjar 50g</li>
+                                <li>Salgadinho sortido 30g</li>
+                                <li>Suco de uva 400ml</li>
+                                <li>Torrone de amendoim 45g</li>
+                                <li>Tubetes recheados 52g (Tub-in)</li>
+                                <li>Caixa de Natal decorada (embalagem para presente)</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn--primary btn--full-width">Solicitar Orçamento</button>
+                    </div>
+
+                    <!-- Cesta 4 - Mimo de Natal -->
+                    <div class="basket-card">
+                        <div class="basket-header">
+                            <h3>🎁 MIMO DE NATAL</h3>
+                            <div class="basket-info">
+                                <span class="items-count">9 itens</span>
+                                <span class="price">R$ 75,00</span>
+                            </div>
+                        </div>
+                        <div class="basket-items">
+                            <button class="toggle-items" data-basket="4">Ver todos os itens</button>
+                            <ul class="items-list hidden" id="items-4">
+                                <li>Panetone tradicional BAUDUCCO/VISCONTI 400g</li>
+                                <li>Espumante filtrado 660ml</li>
+                                <li>Amendoim 50g</li>
+                                <li>Barrinha Maxi Chocolate 25g</li>
+                                <li>Biscoito aperitivo 90g</li>
+                                <li>Farofa pronta temperada 180g</li>
+                                <li>Salgadinho sortido 30g</li>
+                                <li>Tubetes recheados 52g (Tub-in)</li>
+                                <li>Caixa de Natal decorada (embalagem para presente)</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn--primary btn--full-width">Solicitar Orçamento</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de Brindes -->
+            <section class="rewards-section">
+                <h2>🎁 Brindes Especiais</h2>
+                <div class="rewards-grid">
+                    <div class="reward-card">
+                       <div class="reward-icon">
+    			<img src="sanduicheira.png" alt="SANDUICHEIRA" />
+			</div>
+                        <h3>SANDUICHEIRA ELÉTRICA</h3>
+                        <p>Compras acima de <strong>R$ 5.000,00</strong></p>
+                    </div>
+                    <div class="reward-card">
+                        <div class="reward-icon">
+   		 <img src="airfryer.png" alt="AIR FRYER" />
+			</div>
+                        <h3>AIR FRYER</h3>
+                        <p>Compras acima de <strong>R$ 10.000,00</strong></p>
+                    </div>
+                </div>
+                <div class="rewards-disclaimer">
+                    <p><small>Imagens meramente ilustrativas</small></p>
+                    <p><small>Brindes limitados a 1 (uma) unidade por CNPJ</small></p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="company-info">
+                    <h3>CONQUISTA DISTRIBUIDORA DE ALIMENTOS LTDA.</h3>
+                    <div class="contact-info">
+                        <p>📍 Rua Elydia Medina Barbosa, nº 1373 - Éden - Sorocaba/SP - CEP: 18086-603</p>
+                        <p>📞 Telefone: (15) 3326-0763</p>
+                        <p>📱 Instagram: <a href="https://instagram.com/conquista.distribuidora" target="_blank" class="instagram-link">@CONQUISTA.DISTRIBUIDORA</a></p>
+                    </div>
+                </div>
+                <div class="conditions">
+                    <h4>Condições Gerais</h4>
+                    <ul>
+                        <li>Consulte-nos para prazos de pagamento e datas de entrega</li>
+                        <li>Preços válidos enquanto durarem nossos estoques</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app_patched.js"></script>
+  <script src="natal_decor.js"></script>
+  <script src="stickers.js"></script>
+  <script src="tree_anim.js"></script>
+  <script src="link_fallback.js"></script>
+
+  <!-- Força o toggle do som (captura o clique antes de outros handlers) -->
+  <script>
+  (function(){
+    function ready(fn){ if(document.readyState!=='loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
+    ready(function(){
+      var btn = document.getElementById('toggleSound');
+      var a = document.getElementById('bgMusic');
+      if(!btn || !a) return;
+      btn.addEventListener('click', function(ev){
+        ev.preventDefault();
+        var turningOff = !a.paused && !a.ended;
+        if (turningOff){
+          try { a.pause(); } catch(e){}
+          a.muted = true;
+          try { a.dataset.userMuted = 'true'; } catch(e){}
+          btn.textContent = '🔇';
+          btn.setAttribute('aria-label','Som desligado');
+        } else {
+          a.muted = false;
+          try { a.play().catch(function(){}); } catch(e){}
+          try { a.dataset.userMuted = 'false'; } catch(e){}
+          btn.textContent = '🔊';
+          btn.setAttribute('aria-label','Som ligado');
+        }
+      }, true); // capture=true para sobrepor outros handlers
+    });
+  })();
+  </script>
+
+</body>
+</html>
